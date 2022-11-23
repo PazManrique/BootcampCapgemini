@@ -1,5 +1,5 @@
 package com.capgemini.exercise5;
 
-public class Orquesta {
+public abstract class Instrument {
 
 }
