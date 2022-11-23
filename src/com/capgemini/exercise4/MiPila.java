@@ -10,6 +10,8 @@ public class MiPila {
 	public static void main(String[] args) {
 		Push(23);
 		peek();
+		reverse();
+		pop();
 		 
 	   }	
 	  
@@ -38,6 +40,11 @@ public class MiPila {
   	  	
 	
 	      }
+      
+      public static  void pop() {
+    	  	
+    		
+      }
 	      
 
 	
