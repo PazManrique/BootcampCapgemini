@@ -8,7 +8,7 @@ public class Piano extends Instrument {
 	@Override
 	protected String sound() {
 		
-		return "piano.sound()";
+		return "sonido de piano";
 	}
 
 }

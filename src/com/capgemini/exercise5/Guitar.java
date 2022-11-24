@@ -8,7 +8,7 @@ public class Guitar extends Instrument {
 	@Override
 	protected String sound() {
 
-		return "guitarra.sound()";
+		return "sonido de guitarra";
 	}
 
 }

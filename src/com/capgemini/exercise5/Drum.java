@@ -10,7 +10,7 @@ public class Drum extends Instrument {
 	@Override
 	protected String sound() {
 
-		return "drum.sound()";
+		return "sonido de tambor";
 	}
 
 }
