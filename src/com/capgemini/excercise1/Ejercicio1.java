@@ -1,4 +1,4 @@
-package modulo1;
+package com.capgemini.excercise1;
 
 import java.util.Scanner;
 

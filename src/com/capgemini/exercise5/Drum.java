@@ -1,6 +1,8 @@
 package com.capgemini.exercise5;
 
 public class Drum extends Instrument {
+	
+	
 
 	Drum() {
 	}
