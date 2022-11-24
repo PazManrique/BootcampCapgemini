@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="15.0.0">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>40</x>
+      <y>260</y>
+      <w>320</w>
+      <h>190</h>
+    </coordinates>
+    <panel_attributes>Pc
+--
+(-) int nroSerie
+(-) boolean esNotebook
+--
+getNroSerie()
+setNroSerie()
+getEsNotebook()
+setEsNotebook()
+Pc()
+Pc(int nro de serie, boolean esNotebook)
+getId()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>470</x>
+      <y>90</y>
+      <w>210</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>/abstract class TipoItem/
+--
+
+--
+/getId()/</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>410</x>
+      <y>260</y>
+      <w>410</w>
+      <h>230</h>
+    </coordinates>
+    <panel_attributes>Silla
+--
+(-) boolean conRueditas
+(-) int lote
+(-) intnumeroDentroDeLote
+--
+getConRueditas()
+setConRueditas()
+getLote()
+setLote()
+getNumeroDentroDeLote()
+setNumeroDentroDeLote()
+Silla()
+Silla(int Lote, intNumeroDentroDeLote, boolean conRueditas)
+getId()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>120</x>
+      <y>20</y>
+      <w>210</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>class ItemInventario
+--
+main()
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>270</x>
+      <y>150</y>
+      <w>220</w>
+      <h>130</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>200.0;10.0;10.0;110.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>560</x>
+      <y>170</y>
+      <w>30</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;90.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>320</x>
+      <y>50</y>
+      <w>170</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;150.0;80.0</additional_attributes>
+  </element>
+</diagram>
