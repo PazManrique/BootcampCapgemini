@@ -1,6 +1,6 @@
-package com.capgemini.exercise1;
+package com.capgemini.wordCross;
 
-public class Excercise1 {
+public class Exercise1 {
 	/*
 	 * 1. Synchronized
 	 * 2. Declaración
