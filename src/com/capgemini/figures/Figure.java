@@ -28,6 +28,10 @@ public abstract class Figure {
 	public static int getNumberOfFigures() {
 		return numberOfFigures;
 	}
+	
+	public static void clear() {
+		numberOfFigures = 0;
+	}
 
 	public static void setNumberOfFigures(int numberOfFigures) {
 		Figure.numberOfFigures = numberOfFigures;
@@ -65,7 +69,7 @@ public abstract class Figure {
 
 	@Override
 	public String toString() {
-		StringBuilder sb = new StringBuilder("nombre =");
+		StringBuilder sb = new StringBuilder("\nnombre =");
 		sb.append(name);
 		return sb.toString();
 

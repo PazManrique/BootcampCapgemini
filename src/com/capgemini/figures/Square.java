@@ -3,6 +3,8 @@
  */
 package com.capgemini.figures;
 
+import com.capgemini.figures.exceptions.ExceptionFigure;
+
 /**
  * @author mamanriq
  *
@@ -14,16 +16,19 @@ public class Square extends Figure {
 		super();
 	}
 
-	public Square(String name, float side) {
+	public Square(String name, float side) throws ExceptionFigure {
 		super(name);
-		this.side = side;
+		setSide(side);
+		
 	}
 
 	public float getSide() {
 		return side;
 	}
 
-	public void setSide(float side) {
+	public void setSide(float side) throws ExceptionFigure  {
+		if (side<0)
+			throw new ExceptionFigure("El valor del lado no puede ser negativo ANIMAL");
 		this.side = side;
 	}
 

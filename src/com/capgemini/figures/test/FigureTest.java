@@ -16,6 +16,7 @@ import org.junit.jupiter.api.Test;
 import com.capgemini.figures.Circle;
 import com.capgemini.figures.Figure;
 import com.capgemini.figures.Square;
+import com.capgemini.figures.exceptions.ExceptionFigure;
 
 class FigureTest {
 
@@ -62,6 +63,8 @@ class FigureTest {
 
 		figuresList = null;
 		figuresSet = null;
+
+		Figure.clear();
 	}
 
 	@Test
@@ -73,53 +76,84 @@ class FigureTest {
 	void testFullSquareGetSide() {
 		assertEquals(10, fullSquare.getSide(), 0.001);
 	}
-	
+
 	@Test
 	void testSquarePerimeter() {
 		assertEquals(40, fullSquare.calculatePerimeter(), 0.001);
 	}
-	
+
 	@Test
 	void testSquareArea() {
 		assertEquals(100, fullSquare.calculateArea(), 0.001);
 	}
-	
+
 	@Test
-	void testSquareEqualHashcodeList_True() {
+	void testSquareEqualHashcodeList_True() throws ExceptionFigure {
 		assertTrue(figuresList.contains(new Square("square", 10)));
 	}
-	
+
 	@Test
 	void testSquareEqualHashcodeList_False() {
-		assertFalse(figuresList.contains(new Square("LittleSquare", 10)));
+		try {
+			assertFalse(figuresList.contains(new Square("LittleSquare", 10)));
+		} catch (ExceptionFigure e) {
+			assertTrue(false);
+			e.printStackTrace();
+		}
 	}
-	
+
 	@Test
 	void testSquareEqualList_amount() {
 		figuresList.add(new Square());
 		assertEquals(7, figuresList.size());
 	}
-	
+
 	@Test
-	void testSquareSetEqual_amount() {
+	void testSquareSetEqual_amount() throws ExceptionFigure {
 		figuresSet.add(new Square("square", 10));
 		assertEquals(6, figuresSet.size());
 	}
-	
+
 	@Test
-	void testSquareEquals_true() {
+	void testSquareEquals_true() throws ExceptionFigure {
 		Square mySquare = new Square("square", 10);
 		assertTrue(fullSquare.equals(mySquare));
 	}
-	
+
 	@Test
-	void testSquareEquals_false() {
+	void testSquareEquals_false() throws ExceptionFigure {
 		Square mySquare = new Square("littleSquare", 15);
 		assertFalse(fullSquare.equals(mySquare));
 	}
-	
-	
-	
-	
-	
+
+	@Test
+	void testSquareExceptionFigure() {
+		Square sq = new Square();
+		System.out.println("la lista de figuras");
+		System.out.println(figuresList);
+		System.out.println("Cuadrado lleno" + fullSquare);
+		try {
+			sq.setSide(-10);
+		} catch (ExceptionFigure e) {
+			assertEquals("El valor del lado no puede ser negativo ANIMAL", e.getMessage());
+			e.printStackTrace();
+		}
+
 	}
+
+	@Test
+	void testNumberOfFigures() {
+
+		assertEquals(8, Figure.getNumberOfFigures());
+
+	}
+
+	@Test
+	void testNumberOfFigures10() {
+		Square square3 = new Square();
+		Square square4 = new Square();
+
+		assertEquals(10, Figure.getNumberOfFigures());
+
+	}
+}
