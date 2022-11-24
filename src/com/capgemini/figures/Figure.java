@@ -1,29 +1,29 @@
 package com.capgemini.figures;
 
-
 /**
  * 
- * @author mamanriq
- * Esta es la clase padre que va a establecer las pautas para todas las figuras.
+ * @author mamanriq Esta es la clase padre que va a establecer las pautas para
+ *         todas las figuras.
  */
 public abstract class Figure {
 	private String name;
 	private static int numberOfFigures;
 
-	//Constructores
-	
+	// Constructores
+
 	public Figure() {
 		super();
-		numberOfFigures ++;
-	
+		numberOfFigures++;
+
 	}
+
 	public Figure(String name) {
 		this();
 		this.name = name;
-		
+
 	}
-	
-	//Accesos
+
+	// Accesos
 
 	public static int getNumberOfFigures() {
 		return numberOfFigures;
@@ -33,8 +33,6 @@ public abstract class Figure {
 		Figure.numberOfFigures = numberOfFigures;
 	}
 
-
-
 	public String getName() {
 		return name;
 	}
@@ -42,39 +40,35 @@ public abstract class Figure {
 	public void setName(String name) {
 		this.name = name;
 	}
-	
-	
-	//Métodos de negocio
+
+	// Métodos de negocio
 	public abstract float calculatePerimeter();
+
 	public abstract float calculateArea();
-	
+
 	@Override
 	public int hashCode() {
-		
-		return name.hashCode();
+
+		return name == null ? 0 : name.hashCode();
 	}
+
 	@Override
 	public boolean equals(Object obj) {
 		boolean bln = false;
 		if (obj instanceof Figure) {
-			Figure fig = (Figure)obj;
-			bln = fig.getName() != null &&
-				  fig.getName().equals(name);
-			
+			Figure fig = (Figure) obj;
+			bln = fig.getName() != null && fig.getName().equals(name);
+
 		}
 		return bln;
 	}
+
 	@Override
 	public String toString() {
-	StringBuilder sb = new StringBuilder("nombre =");
-	sb.append(name);
-	return sb.toString();
-	
+		StringBuilder sb = new StringBuilder("nombre =");
+		sb.append(name);
+		return sb.toString();
+
 	}
-	
-	
-	
-	
-	
 
 }
