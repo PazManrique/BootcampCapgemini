@@ -71,18 +71,20 @@ public class Employee {
 	}
 
 	@Override
-	public boolean equals(Object obj) {
-
-		if (this == obj)
-			return true;
-
-		if (obj == null || obj.getClass() != this.getClass())
-			return false;
-
-		Employee employee = (Employee) obj;
-
-		return (employee.nombre == this.nombre && employee.salario == this.salario && employee.edad == this.edad
-				&& employee.fechaIngreso.equals(fechaIngreso) );
+public boolean equals(Object obj) {
+        
+        boolean employee = false;
+        
+        if(obj instanceof Employee) {
+        Employee employee2 = (Employee)obj;
+        employee = employee2.getNombre() != null
+                && employee2.getNombre().equals(nombre)
+                && employee2.getFechaIngreso() != null && employee2.getFechaIngreso().equals(fechaIngreso)
+                && employee2.getEdad() != 0 && employee2.getEdad() == (edad); 
+       
+        }
+        
+        return employee;
 	}
 	      
 	    @Override
@@ -98,10 +100,20 @@ public class Employee {
 	      
 
 	@Override
-	public String toString() {//cambiar por stringbuilder
-		
-		return "Employee [fechaIngreso=" + fechaIngreso + ", salario=" + salario + "nombre=" + nombre + ", edad=" + edad + "]";
+	public String toString() {
+        StringBuilder sb = new StringBuilder("\nnombre=");
+        sb.append("Fecha de ingreso: ");
+        sb.append(fechaIngreso);
+        sb.append("Salario: ");
+        sb.append(salario);
+        sb.append("Nombre: ");
+        sb.append(nombre);
+        sb.append("Edad: ");
+        sb.append(edad);
+        return sb.toString();
 
-	}
+
+
+   }
 
 }
