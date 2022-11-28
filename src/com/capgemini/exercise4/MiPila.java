@@ -12,7 +12,7 @@ public class MiPila {
 		peek();
 		pop();
 		reverse();
-		printElements(numbers);
+		
 		
 
 	}
@@ -20,10 +20,7 @@ public class MiPila {
 	private static ArrayList<Integer> numbers = new ArrayList<Integer>();
 
 	public static void Push(Integer number) {
-		numbers.add(15);
-		numbers.add(22);
-		numbers.add(30);
-		numbers.add(40);
+	
 		numbers.add(number);
 
 		for (Integer position : numbers) {
@@ -33,8 +30,10 @@ public class MiPila {
 
 	public static  int peek() {
     	  	int lastIdx = numbers.size() - 1;
-    		int lastElement = numbers.get(lastIdx);
+    		Integer lastElement = numbers.get(lastIdx);
+    		
     		return lastElement;
+    		
 	   
 	      }
 
@@ -51,11 +50,7 @@ public class MiPila {
 	        return numbers;
 	}
 	
-	public static void printElements(ArrayList<Integer> numbers)
-    {
-        for (int i = 0; i < numbers.size(); i++) {
-            System.out.print(numbers.get(i) + " ");
-        }}
+	
 
 	public static int pop() {
 		int lastIdx = numbers.size() - 1;
