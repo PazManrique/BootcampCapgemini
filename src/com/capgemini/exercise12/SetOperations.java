@@ -49,6 +49,20 @@ public abstract class SetOperations <T> {
 		return res;
 	}
 	
+	public static <T> Set<T> intersection (Set<T> a, Set<T> b){
+		Set<T> res =new HashSet<T>(a);
+		res.retainAll(b);
+		
+		return res;
+	}
+	
+	public static <T> Set<T> difference (Set<T> a, Set<T> b){
+		Set<T> res =new HashSet<T>(a);
+		res.removeAll(b);
+		
+		return res;
+	}
+	
 		
 	}
 
