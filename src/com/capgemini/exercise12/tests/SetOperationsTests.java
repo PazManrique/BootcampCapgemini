@@ -9,6 +9,8 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import com.capgemini.exercise12.SetOperations;
+
 class SetOperationsTests {
 	
 	Set<String> setStrA;
@@ -47,8 +49,8 @@ class SetOperationsTests {
 		setIntB.add(2);
 		setIntB.add(3);
 		setIntB.add(4);
-		setIntB.add(6);
 		setIntB.add(7);
+		setIntB.add(8);
 		
 		
 
@@ -73,7 +75,7 @@ class SetOperationsTests {
 		totalUnion.add(7);
 		totalUnion.add(8);
 		
-//		assertEquals(totalUnion, SetOperations.union(setIntA, setIntB));
+assertEquals(totalUnion, SetOperations.union(setIntA, setIntB));
 		
 
 }
