@@ -63,8 +63,14 @@ public abstract class SetOperations <T> {
 		return res;
 	}
 	
+	public static <T> Set<T> difSymmetrical(Set<T> a, Set<T> b) {
+        Set<T> resUnion = union (a, b);
+        Set<T> resIntersection = intersection(a,b);
+		
+         return difference(resUnion, resIntersection);
 		
 	}
+}
 
 			
 			

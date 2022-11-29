@@ -7,6 +7,8 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
+import java.util.TreeSet;
 
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
@@ -14,6 +16,9 @@ import org.junit.jupiter.api.Test;
 
 import com.capgemini.exercise13.Person;
 import com.capgemini.exercise13.util.PersonsUtil;
+import com.capgemini.figures.Circle;
+import com.capgemini.figures.Figure;
+import com.capgemini.figures.Square;
 
 class PersonsUtilTest {
 	
@@ -30,11 +35,11 @@ class PersonsUtilTest {
 	void setUp() throws Exception {
 		listTest = new ArrayList < Person> ();
         listTest.add(new Person(101, 23, "Jos"));
-        listTest.add(new Person(102, 25, "Ana"));
         listTest.add(new Person(103, 27, "Clara"));
-        
-        person1 = new Person(101, 23, "Jos");
-        person2 = new Person(102, 25, "Ana");
+        listTest.add(new Person(102, 25, "Ana"));
+    
+        person1 = new Person(102, 25, "Ana");
+        person2 = new Person(101, 23, "Jos");
         person3 = new Person(103, 27, "Clara");
         
       
@@ -73,6 +78,26 @@ class PersonsUtilTest {
 		 assertNotEquals(expected, PersonsUtil.getPersons(listTest));
 	  
 	}
+	
+	
+	
+	
+	@Test
+	void testOrderPersonas_true() {
+		 
+		Set<Integer> expected = new TreeSet<Integer>();
+		expected.add(person1.getAge());
+		expected.add(person2.getAge());
+		expected.add(person3.getAge());
+	
+System.out.println(expected);
+System.out.println(PersonsUtil.orderPersons(listTest));
+		assertEquals(expected, PersonsUtil.orderPersons(listTest));
+	  
+	}
+	
+	
+	
 
 
 }

@@ -1,10 +1,12 @@
 package com.capgemini.exercise13;
 
+
+
 import java.util.Objects;
 
-public class Person {
+public class Person implements Comparable <Person> {
 	private int file;
-	private int age;
+	private Integer age;
 	private String name;
 	
 	
@@ -41,7 +43,7 @@ public class Person {
 	/**
 	 * @return the age
 	 */
-	public int getAge() {
+	public Integer getAge() {
 		return age;
 	}
 
@@ -92,6 +94,21 @@ public class Person {
 	@Override
 	public String toString() {
 		return "Person [file=" + file + ", age=" + age + ", name=" + name + "]";
+	}
+
+
+
+
+
+
+
+	
+
+
+	@Override
+	public int compareTo(Person o) {
+		// TODO Auto-generated method stub
+		return age.compareTo(o.getAge());
 	}
 	
 	

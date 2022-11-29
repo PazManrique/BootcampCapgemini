@@ -5,7 +5,7 @@ package com.capgemini.figures;
  * @author mamanriq Esta es la clase padre que va a establecer las pautas para
  *         todas las figuras.
  */
-public abstract class Figure {
+public abstract class Figure implements Comparable<Figure> {
 	private String name;
 	private static int numberOfFigures;
 
@@ -69,10 +69,21 @@ public abstract class Figure {
 
 	@Override
 	public String toString() {
-		StringBuilder sb = new StringBuilder("\nnombre =");
+		StringBuilder sb = new StringBuilder("\nombre =");
 		sb.append(name);
+		sb.append("\n_ _ _ _ _ _ \n");
 		return sb.toString();
 
 	}
+
+	@Override
+	public int compareTo(Figure o) {
+		// TODO Auto-generated method stub
+		return (-1)*name.compareTo(o.getName());
+	}
+	
+	
+	
+	
 
 }

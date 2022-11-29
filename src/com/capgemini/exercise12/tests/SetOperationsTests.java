@@ -151,4 +151,35 @@ assertEquals(totalUnion, SetOperations.difference(setIntA, setIntB));
 assertEquals(totalUnion, SetOperations.difference(setStrA, setStrB));
 		
 }
+	
+	@Test
+	void testDifSymmetricalInteger() {
+		Set<Integer> totalUnion = new HashSet<Integer>();
+		totalUnion.add(5);
+		totalUnion.add(7);
+		totalUnion.add(8);
+		
+		
+assertEquals(totalUnion, SetOperations.difSymmetrical(setIntA, setIntB));
+		
+}
+	
+	@Test
+	void testDifSymmetricalString() {
+		Set<String> totalUnion = new HashSet<String>();
+		
+		totalUnion.add("Viviana");
+		totalUnion.add("Marina");
+		totalUnion.add("Cristina");
+		totalUnion.add("Gabriel");
+		totalUnion.add("Nerea");
+		totalUnion.add("Marta");
+		
+		
+assertEquals(totalUnion, SetOperations.difSymmetrical(setStrA, setStrB));
+		
+}
+	
+	
+	
 }
