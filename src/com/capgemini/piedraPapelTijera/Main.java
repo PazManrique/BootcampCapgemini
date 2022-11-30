@@ -21,6 +21,8 @@ public class Main {
 	System.out.println("El usuario eligió; " + pptUsuario.getNombre());
 	System.out.println("El ordenador eligió; " + pptOrdenador.getNombre());
 	System.out.println("resultado " + pptUsuario.getDescripcionResultado());
+	sc.close();
 	}
 
+	
 }
