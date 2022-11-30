@@ -1,4 +1,4 @@
-package com.capgemini.exercise1;
+package com.capgemini.exercise01;
 
 import java.util.Scanner;
 
