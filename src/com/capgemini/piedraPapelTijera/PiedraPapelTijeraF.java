@@ -8,13 +8,25 @@ public abstract class PiedraPapelTijeraF {
 	static int papel = 2;
 	static int tijera = 3;
 	protected String descripcionResultado;
-	static List<PiedraPapelTijeraF> elementos;
-	String nombre;
-	int numero;
+	private static List<PiedraPapelTijeraF> elementos;
+	protected String nombre;
+	protected int numero;
 
-	public String getDescripcionResultado() {
-		return descripcionResultado;
+	//Constructores 
+	
+	public PiedraPapelTijeraF() {
+		super();
+		// TODO Auto-generated constructor stub
 	}
+
+	/**
+	 * 
+	 */
+	public PiedraPapelTijeraF(String nombre, int numero) {
+
+	}
+	
+	//Accesos
 
 	public String getNombre() {
 		return nombre;
@@ -31,16 +43,23 @@ public abstract class PiedraPapelTijeraF {
 	public void setNumero(int numero) {
 		this.numero = numero;
 	}
+	
+	public String getDescripcionResultado() {
+		return descripcionResultado;
+	}
+	
 
-	/**
-	 * 
-	 */
-	public PiedraPapelTijeraF(String nombre, int numero) {
-
+	//Métodos 
+	
+	abstract boolean isMe(int numero);
+	
+	abstract int comparar();
+	
+	PiedraPapelTijeraF getInstance(int numero) {
+		return null;
 	}
 
-	abstract void isMe(int numero);
-
+	
 	
 		
 	
