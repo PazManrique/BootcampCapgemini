@@ -5,7 +5,7 @@ public class Tijera extends PiedraPapelTijeraF  {
 	
 
 	public Tijera() {
-		super();
+		this("tijera", TIJERA);
 		
 	}
 
@@ -15,17 +15,36 @@ public class Tijera extends PiedraPapelTijeraF  {
 	}
 
 	@Override
-	boolean isMe(int numero) {
-		return false;
+	public boolean isMe(int numero) {
+		return numero == TIJERA;
 		
 		
 	}
 
 	@Override
-	int comparar() {
-		// TODO Auto-generated method stub
-		return 0;
+	public int comparar(PiedraPapelTijeraF pPiedraPapelTijera) {
+		int result = 0;
+		int numeroRecibido = pPiedraPapelTijera.getNumero();
+
+		switch (numeroRecibido) {
+		case PIEDRA:
+			result = -1;
+			descripcionResultado = nombre + "pierde con" + pPiedraPapelTijera.getNombre();
+			break;
+		case PAPEL:
+			result = 1;
+			descripcionResultado = nombre + "le gana a" + pPiedraPapelTijera.getNombre();
+			break;
+		default:
+			result = 0;
+			descripcionResultado = nombre + "empata con" + pPiedraPapelTijera.getNombre();
+
+			break;
+
+		}
+		return result;
 	}
+
 
 	
 

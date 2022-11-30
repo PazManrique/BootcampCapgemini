@@ -4,20 +4,19 @@ import java.util.List;
 
 public abstract class PiedraPapelTijeraF {
 
-	static int piedra = 1;
-	static int papel = 2;
-	static int tijera = 3;
-	protected String descripcionResultado;
-	private static List<PiedraPapelTijeraF> elementos;
-	protected String nombre;
-	protected int numero;
+	public static final int PIEDRA = 1;
+	public static final  int PAPEL = 2;
+	public static final  int TIJERA = 3;
+	
+	
+	protected String 							descripcionResultado;
+	private static List<PiedraPapelTijeraF> 	elementos;
+	protected String 							nombre;
+	protected int 								numero;
 
 	//Constructores 
 	
-	public PiedraPapelTijeraF() {
-		super();
-		// TODO Auto-generated constructor stub
-	}
+
 
 	/**
 	 * 
@@ -28,35 +27,24 @@ public abstract class PiedraPapelTijeraF {
 	
 	//Accesos
 
-	public String getNombre() {
-		return nombre;
-	}
+	public String getNombre() 				{return nombre;}
+	public void setNombre(String nombre) 	{this.nombre = nombre;}
 
-	public void setNombre(String nombre) {
-		this.nombre = nombre;
-	}
-
-	public int getNumero() {
-		return numero;
-	}
-
-	public void setNumero(int numero) {
-		this.numero = numero;
-	}
+	public int getNumero() 					{return numero;}
+	public void setNumero(int numero) 		{this.numero = numero;}
 	
-	public String getDescripcionResultado() {
-		return descripcionResultado;
-	}
+	public String getDescripcionResultado() {return descripcionResultado;}
 	
 
-	//Métodos 
+	//Métodos de negocio
 	
-	abstract boolean isMe(int numero);
+	public abstract boolean isMe(int numero);
 	
-	abstract int comparar();
+	public abstract int comparar(PiedraPapelTijeraF pPiedraPapelTijera);
 	
-	PiedraPapelTijeraF getInstance(int numero) {
-		return null;
+	public static PiedraPapelTijeraF getInstance(int pNumero) {
+	
+	return null;
 	}
 
 	
