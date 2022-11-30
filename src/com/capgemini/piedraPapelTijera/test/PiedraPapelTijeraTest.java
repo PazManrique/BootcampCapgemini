@@ -14,21 +14,30 @@ import com.capgemini.piedraPapelTijera.Tijera;
 class PiedraPapelTijeraTest {
 	//lote de pruebas
 	PiedraPapelTijeraF piedra,
+					   piedra2,
 					   papel,
-					   tijera;
+					   papel2,
+					   tijera,
+					   tijera2;
 
 	@BeforeEach
 	void setUp() throws Exception {
 		piedra = new Piedra();
+		piedra2 = new Piedra();
 		papel =  new Papel();
-			tijera =	new Tijera();
+		papel2 =  new Papel();
+		tijera =	new Tijera();
+		tijera2 =	new Tijera();
 	}
 
 	@AfterEach
 	void tearDown() throws Exception {
 		piedra = null;
+		piedra2 = null;
 		papel = null;
+		papel2 = null;
 		tijera = null;
+		tijera2 = null;
 	}
 
 	@Test
@@ -75,7 +84,7 @@ class PiedraPapelTijeraTest {
 	
 	@Test
 	void testPiedraEmpataConPiedra() {
-		assertEquals(0, piedra.comparar(piedra));
+		assertEquals(0, piedra2.comparar(piedra));
 
 }
 	
@@ -93,7 +102,8 @@ class PiedraPapelTijeraTest {
 	
 	@Test
 	void testTijeraEmpataTijera() {
-		assertEquals(0, tijera.comparar(tijera));
+		
+		assertEquals(0, tijera2.comparar(tijera));
 
 }
 	
@@ -111,7 +121,7 @@ class PiedraPapelTijeraTest {
 	
 	@Test
 	void testPapelEmpataPapel() {
-		assertEquals(0, papel.comparar(papel));
+		assertEquals(0, papel2.comparar(papel));
 
 }
 	
