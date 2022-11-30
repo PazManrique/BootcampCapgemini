@@ -2,13 +2,15 @@ package com.capgemini.exercise13.test;
 
 
 import static org.junit.jupiter.api.Assertions.*;
-
+import java.util.Iterator;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
 import java.util.TreeSet;
+
+
 
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
@@ -85,14 +87,13 @@ class PersonsUtilTest {
 	@Test
 	void testOrderPersonas_true() {
 		 
-		Set<Integer> expected = new TreeSet<Integer>();
-		expected.add(person1.getAge());
-		expected.add(person2.getAge());
-		expected.add(person3.getAge());
-	
-System.out.println(expected);
-System.out.println(PersonsUtil.orderPersons(listTest));
-		assertEquals(expected, PersonsUtil.orderPersons(listTest));
+		Set<Person> expected = PersonsUtil.orderPersons(listTest);
+		Iterator<Person> it = expected.iterator();
+		assertEquals(person2, it.next());
+		assertEquals(person1, it.next());
+		assertEquals(person3, it.next());
+
+		
 	  
 	}
 	

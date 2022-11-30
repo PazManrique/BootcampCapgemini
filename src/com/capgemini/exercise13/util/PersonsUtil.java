@@ -25,12 +25,12 @@ public abstract class PersonsUtil {
 
 	}
 	
-	public static  Set<Integer> orderPersons(List<Person> list) {
+	public static  Set<Person> orderPersons(List<Person> list) {
 
-		Set<Integer> persons = new TreeSet<Integer>();
+		Set<Person> persons = new TreeSet<Person>();
 		
 		for (Person person :list){
-			persons.add(person.getAge());
+			persons.add(person);
 			
 		}
 		return persons;
