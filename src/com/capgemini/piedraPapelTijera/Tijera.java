@@ -29,15 +29,15 @@ public class Tijera extends PiedraPapelTijeraF  {
 		switch (numeroRecibido) {
 		case PIEDRA:
 			result = -1;
-			descripcionResultado = nombre + "pierde con" + pPiedraPapelTijera.getNombre();
+			descripcionResultado = nombre + " pierde con " + pPiedraPapelTijera.getNombre();
 			break;
 		case PAPEL:
 			result = 1;
-			descripcionResultado = nombre + "le gana a" + pPiedraPapelTijera.getNombre();
+			descripcionResultado = nombre + " le gana a " + pPiedraPapelTijera.getNombre();
 			break;
 		default:
 			result = 0;
-			descripcionResultado = nombre + "empata con" + pPiedraPapelTijera.getNombre();
+			descripcionResultado = nombre + " empata con " + pPiedraPapelTijera.getNombre();
 
 			break;
 

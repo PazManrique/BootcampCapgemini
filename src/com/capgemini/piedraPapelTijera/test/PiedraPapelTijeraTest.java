@@ -39,6 +39,8 @@ class PiedraPapelTijeraTest {
 		tijera = null;
 		tijera2 = null;
 	}
+	
+	//instance
 
 	@Test
 	void testGetInstancePiedra_true() {
@@ -70,6 +72,8 @@ class PiedraPapelTijeraTest {
 		assertFalse(PiedraPapelTijeraF.getInstance(PiedraPapelTijeraF.TIJERA)instanceof Papel);
 	}
 	
+	
+	//piedra
 	@Test
 	void testPiedraLeGanaATijera() {
 		assertEquals(1, piedra.comparar(tijera));
@@ -87,6 +91,8 @@ class PiedraPapelTijeraTest {
 		assertEquals(0, piedra2.comparar(piedra));
 
 }
+	
+	//tijera
 	
 	@Test
 	void testTijeraGanaPapel() {
@@ -107,6 +113,8 @@ class PiedraPapelTijeraTest {
 
 }
 	
+	//papel
+	
 	@Test
 	void testPapelGanaPiedra() {
 		assertEquals(1, papel.comparar(piedra));
@@ -122,6 +130,74 @@ class PiedraPapelTijeraTest {
 	@Test
 	void testPapelEmpataPapel() {
 		assertEquals(0, papel2.comparar(papel));
+
+}
+	
+	//papel texto
+	
+	@Test
+	void testPapelTextoEmpata() {
+		papel.comparar(papel2);
+		assertEquals("papel empata con papel", papel.getDescripcionResultado());
+
+}
+	
+	@Test
+	void testPapelTextoPierde() {
+		papel.comparar(tijera);
+		assertEquals("papel pierde con tijera", papel.getDescripcionResultado());
+
+}
+	
+	@Test
+	void testPapelTextoGana() {
+		papel.comparar(piedra);
+		assertEquals("papel le gana a piedra", papel.getDescripcionResultado());
+
+}
+	
+	//piedra
+	
+	@Test
+	void testPiedraTextoPierde() {
+		piedra.comparar(papel);
+		assertEquals("piedra pierde con papel", piedra.getDescripcionResultado());
+
+}
+	
+	@Test
+	void testPiedraTextoEmpata() {
+		piedra.comparar(piedra2);
+		assertEquals("piedra empata con piedra", piedra.getDescripcionResultado());
+
+}
+	
+	@Test
+	void testPiedraTextoGana() {
+		piedra.comparar(tijera);
+		assertEquals("piedra le gana a tijera", piedra.getDescripcionResultado());
+
+}
+	
+	//tijera
+	
+	@Test
+	void testTijeraTextoGana() {
+		tijera.comparar(papel);
+		assertEquals("tijera le gana a papel", tijera.getDescripcionResultado());
+
+}
+	
+	@Test
+	void testTijeraTextoPierde() {
+		tijera.comparar(piedra);
+		assertEquals("tijera pierde con piedra", tijera.getDescripcionResultado());
+
+}
+	@Test
+	void testTijeraTextoEmpata() {
+		tijera.comparar(tijera2);
+		assertEquals("tijera empata con tijera", tijera.getDescripcionResultado());
 
 }
 	
