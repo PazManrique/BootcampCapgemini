@@ -68,8 +68,52 @@ class PiedraPapelTijeraTest {
 }
 	
 	@Test
+	void testPiedraPierdeConPapel() {
+		assertEquals(-1, piedra.comparar(papel));
+
+}
+	
+	@Test
+	void testPiedraEmpataConPiedra() {
+		assertEquals(0, piedra.comparar(piedra));
+
+}
+	
+	@Test
+	void testTijeraGanaPapel() {
+		assertEquals(1, tijera.comparar(papel));
+
+}
+	
+	@Test
 	void testTijeraPierdePiedra() {
 		assertEquals(-1, tijera.comparar(piedra));
 
 }
+	
+	@Test
+	void testTijeraEmpataTijera() {
+		assertEquals(0, tijera.comparar(tijera));
+
+}
+	
+	@Test
+	void testPapelGanaPiedra() {
+		assertEquals(1, papel.comparar(piedra));
+
+}
+	
+	@Test
+	void testPapelPierdeTijera() {
+		assertEquals(-1, papel.comparar(tijera));
+
+}
+	
+	@Test
+	void testPapelEmpataPapel() {
+		assertEquals(0, papel.comparar(papel));
+
+}
+	
+	
 }
