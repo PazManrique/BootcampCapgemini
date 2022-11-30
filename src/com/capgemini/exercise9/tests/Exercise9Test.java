@@ -49,6 +49,13 @@ class Exercise9Test {
 		assertFalse(junior.equals(pazT));
 	}
 	
+	@Test
+	void testEmployeeHashCode_False() {
+		Date fecha = new Date (2022,10,18);
+		Employee pazT = new Employee (fecha, 16000, "Giaco", 30);
+		assertFalse(pazT.hashCode()== junior.hashCode());
+	}
+	
 
 	
 }
