@@ -33,14 +33,14 @@ public class CalendarExample {
 		 * System.out.println("Día a resaltar"); int heightLightDay = sc.nextInt();
 		 */
 		
-		calendarPrint(month, year);
 		
-		sc.close();
+		
+
 		
 		   if ( month < 1 || month > 12)
                System.out.print("Mes no válido, intenta nuevamente");
            else
-        	   calendarPrint((month-1), year);
+        	   calendarPrint((month), year);
 		
 	}
 	
@@ -50,6 +50,10 @@ public class CalendarExample {
 
           printMonthHeader(m, y);
           printMonthBody(startDay, numDaysInMonths);
+      	Calendar cal = Calendar.getInstance();
+    	int actualDay = cal.get(Calendar.DAY_OF_MONTH);
+    	System.out.println("\nLa fecha actual es" + actualDay);
+		
       }
 
       static void printMonthBody (int startDay, int numDaysInMonths) { //Display the days in the calendar
@@ -63,10 +67,12 @@ public class CalendarExample {
               if ( i < 10 )
                   System.out.print("   " + i );
               else
-                  System.out.print("  " + i + " ");
+                  System.out.print("  " + i );
 
               if ((startDay + i) % 7 == 0)
                   System.out.println();
+             
+              
           }
           System.out.println();
       }
@@ -106,32 +112,32 @@ public class CalendarExample {
           }
           return monthName;
       }
-      private static int getNumDaysInMonth(int pMes, int pAnio) {
-   	   Calendar cal = Calendar.getInstance();
-      	   cal.set(pAnio, pMes, 1);
-      	   int ultimoDia =1;
-      	   
-      	   while(cal.get(Calendar.MONTH) == pMes) {
-      		   ultimoDia =cal.get(Calendar.DATE);
-      		   cal.add(Calendar.DATE, 1);
-      	   }
-      		   
-   	   return ultimoDia;
-      
-      }
+//      private static int getNumDaysInMonth(int pMes, int pAnio) {
+//   	   Calendar cal = Calendar.getInstance();
+//      	   cal.set(pAnio, pMes, 1);
+//      	   int ultimoDia =1;
+//      	   
+//      	   while(cal.get(Calendar.MONTH) == pMes) {
+//      		   ultimoDia =cal.get(Calendar.DATE);
+//      		   cal.add(Calendar.DATE, 1);
+//      	   }
+//      		   
+//   	   return ultimoDia;
+//      
+//      }
 
 
 
-		/*
-		 * static int getNumDaysInMonth (int m, int y) { int numDaysInMonths= 0; switch
-		 * (m) { case 1: case 3: case 5: case 7: case 8: case 10: case 12:
-		 * numDaysInMonths= 31; break; case 4: case 6: case 9: case 11: numDaysInMonths
-		 * = 30; break; case 2: if (isLeapYear(y)) numDaysInMonths = 29; else
-		 * numDaysInMonths = 28; break; } return numDaysInMonths; }
-		 * 
-		 * static boolean isLeapYear (int y) { return (y % 400 == 0) || (y % 4 == 0 && y
-		 * % 100 != 0); // return true; // return false; }
-		 */
+		
+		  static int getNumDaysInMonth (int m, int y) { int numDaysInMonths= 0; switch
+		  (m) { case 1: case 3: case 5: case 7: case 8: case 10: case 12:
+		  numDaysInMonths= 31; break; case 4: case 6: case 9: case 11: numDaysInMonths
+		  = 30; break; case 2: if (isLeapYear(y)) numDaysInMonths = 29; else
+		  numDaysInMonths = 28; break; } return numDaysInMonths; }
+		  
+		  static boolean isLeapYear (int y) { return (y % 400 == 0) || (y % 4 == 0 && y
+		  % 100 != 0);} // return true; // return false; }
+		 
 
       static int getStartDay (int m, int y) {
           // Adjust month number & year to fit Zeller's numbering system
@@ -150,4 +156,9 @@ public class CalendarExample {
           int dayNum = ( ( h + 5 ) % 7 ) + 1;
           return dayNum;
       }
-}
+      
+    
+    
+      }
+      
+
