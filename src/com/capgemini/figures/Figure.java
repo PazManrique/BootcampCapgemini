@@ -78,7 +78,7 @@ public abstract class Figure implements Comparable<Figure> {
 
 	@Override
 	public int compareTo(Figure o) {
-		// TODO Auto-generated method stub
+		
 		return (-1)*name.compareTo(o.getName());
 	}
 	

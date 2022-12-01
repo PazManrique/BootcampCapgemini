@@ -8,7 +8,7 @@ public class Piedra extends PiedraPapelTijeraF {
 
 	public Piedra(String nombre, int numero) {
 		super(nombre, numero);
-		// TODO Auto-generated constructor stub
+		
 	}
 
 	@Override

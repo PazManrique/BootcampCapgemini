@@ -1,7 +1,7 @@
 package com.capgemini.exercise2;
 
 import java.io.IOException;
-import java.util.Scanner;
+
 
 public class HelloWorld {
 	

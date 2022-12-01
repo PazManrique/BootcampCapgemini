@@ -3,7 +3,7 @@ package com.capgemini.comparison;
 import java.util.Set;
 import java.util.TreeSet;
 
-import com.capgemini.exercise13.Person;
+
 import com.capgemini.figures.Circle;
 import com.capgemini.figures.Figure;
 import com.capgemini.figures.Square;

@@ -8,7 +8,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
-import java.util.TreeSet;
+
 
 
 
@@ -18,9 +18,7 @@ import org.junit.jupiter.api.Test;
 
 import com.capgemini.exercise13.Person;
 import com.capgemini.exercise13.util.PersonsUtil;
-import com.capgemini.figures.Circle;
-import com.capgemini.figures.Figure;
-import com.capgemini.figures.Square;
+
 
 class PersonsUtilTest {
 	

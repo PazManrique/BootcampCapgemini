@@ -12,7 +12,7 @@ public class Person implements Comparable <Person> {
 	
 	public Person() {
 		super();
-		// TODO Auto-generated constructor stub
+		
 	}
 
 
@@ -107,7 +107,7 @@ public class Person implements Comparable <Person> {
 
 	@Override
 	public int compareTo(Person o) {
-		// TODO Auto-generated method stub
+		
 		return age.compareTo(o.getAge());
 	}
 	

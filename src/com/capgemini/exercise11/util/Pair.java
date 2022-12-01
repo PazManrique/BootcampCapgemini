@@ -6,7 +6,7 @@ public class Pair <T> {
 	
 	public Pair() {
 		super();
-		// TODO Auto-generated constructor stub
+		
 	}
 	
 	

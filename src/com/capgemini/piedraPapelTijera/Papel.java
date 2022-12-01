@@ -11,7 +11,7 @@ public class Papel extends PiedraPapelTijeraF {
 
 	public Papel(String nombre, int numero) {
 		super(nombre, numero);
-		// TODO Auto-generated constructor stub
+		
 	}
 
 	@Override

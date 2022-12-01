@@ -15,7 +15,7 @@ public class GuessTheNumber {
 		
 		System.out.println(number);
 		System.out.println("Intenta acertar al número en 10 o menos intentos. Recuerda que debe ser un número entre 0 y 100");
-		
+		 sc.close();
 		for ( i = 1; i <= attemps; i++) {
 			 
             System.out.println(
@@ -51,7 +51,9 @@ public class GuessTheNumber {
             System.out.println(
                 "El número era" + number);
         }
+       
     }
+	
 		
 	}
 

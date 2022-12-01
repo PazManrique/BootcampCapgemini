@@ -43,7 +43,7 @@ public class Circle extends Figure {
 
 	@Override
 	public int hashCode() {
-		// TODO Auto-generated method stub
+		
 		return super.hashCode() + (int) radius;
 	}
 

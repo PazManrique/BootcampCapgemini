@@ -10,7 +10,7 @@ public class C {
 	try {
 		A.a();
 	} catch (ExceptionA e) {
-		// TODO Auto-generated catch block
+		
 		e.printStackTrace();
 	}
 	A.b();

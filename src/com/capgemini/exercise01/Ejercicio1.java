@@ -10,7 +10,6 @@ import java.util.Scanner;
 public class Ejercicio1 {
 public static void main(String[] args) {
 	Scanner sc = new Scanner(System.in);
-	String str = new String("Hola, Soy Paz");
 	
 	System.out.println("Ingrese un número");
 	int i = sc.nextInt();
@@ -21,6 +20,7 @@ public static void main(String[] args) {
 		System.out.println("Ganaste");}
 		else 
 			System.out.println("Seguí participando");
+	sc.close();
 	
 }
 }
